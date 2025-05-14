@@ -1,0 +1,969 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* background: red; */
+}
+
+#main {
+    width: 100%;
+    /* height: 100%; */
+}
+
+#loader {
+    /* display: none; */
+
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    background-color: #111;
+    color: #fff;
+}
+
+#loader #topheading {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#topheading h5 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300px;
+    text-align: center;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.italic_green_span{
+    font-style: italic;
+    color: #14CF93;
+    opacity: 1;
+    font-weight: 500;
+}
+
+#loader h1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+#loader h1 span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.reveal .parent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.reveal .parent .child {
+    display: block;
+
+}
+
+.child span {
+    display: inline-block;
+}
+
+
+#green {
+    /* display: none; */
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 0vh;
+    background-color: #14CF93;
+}
+
+#home {
+    min-height: 190vh;
+    /* height: 190vh; */
+    /* if you keep only height then you will not be able to scroll down your website after the card that is you will not be able to see the work section*/
+    width: 100%;
+    background-color: #FCFAF8;
+}
+
+#home #nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    width: 100%;
+    height: 100px;
+}
+
+#nav a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+}
+#archive a {
+    text-decoration: none;
+}
+/* line hover css goes here */
+
+#nav a .line,
+#archive a .line {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    background-color: #000;
+}
+
+/* #nav a:hover .line,
+#archive a:hover .line {
+    width: 0;
+} */
+
+#nav a .line1,
+#archive a .line1 {
+    width: 0%;
+    left: 0;
+    height: 1px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: .1s;
+}
+
+#nav a:hover .line1,
+#archive a:hover .line1 {
+    width: 100%;
+}
+
+#nav a .line2,
+#archive a .line2 {
+    width: 100%;
+    height: 1px;
+    right: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#nav a:hover .line2,
+#archive a:hover .line2 {
+    width: 0%;
+}
+
+/* line hover css for the archive section where for alternate a  the line was comming little bit bold */
+
+#archive a .lineu1 {
+    width: 0%;
+    font-weight: 100;
+    left: 0;
+    height: 0.5px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: .1s;
+}
+
+
+#archive a:hover .lineu1 {
+    width: 100%;
+}
+
+
+#archive a .lineu2 {
+    width: 100%;
+    height: 0.5px;
+    right: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+
+#archive a:hover .lineu2 {
+    width: 0%;
+}
+
+.row {
+    display: flex;
+    margin-top: 2vw;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #333;
+    line-height: 1.2;
+    padding: 0 7vw;
+    padding-right: 12vw;
+}
+
+
+/* .row css goes here */
+
+.row h1 {
+    font-size: 12vw;
+    font-weight: 500;
+}
+
+.row .text {
+    margin-top: 0vw;
+}
+
+.row h5 {
+    opacity: 0.6;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.row:nth-child(3) {
+    margin-top: 0;
+}
+
+.row svg {
+    height: 8.5vw;
+    margin: 0 2.5vw;
+}
+
+.row img {
+    max-height: 6vw;
+}
+
+path,
+polyline {
+    stroke: #14cf93;
+}
+
+.spanletter {
+    color: #14CF93;
+}
+
+#imagery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20vw;
+    width: 100%;
+    padding: 5vw 7vw;
+}
+
+#imagery #imglef {
+    width: 30%;
+    height: auto;
+}
+
+#imglef h1 {
+    font-weight: 500;
+    font-size: 2.4vw;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+#imglef h1 span {
+    color: #14CF93;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+}
+
+#imgrig {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background-color: yellow; */
+    height: 300px;
+    /* height: auto; */
+}
+
+#imgrig .imgcntnr {
+    position: absolute;
+    width: 30vw;
+    z-index: 1;
+    border-radius: 1vw;
+    height: 45vw;
+    filter: grayscale();
+    background-color: red;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+    cursor: pointer;
+}
+
+#imgrig .imgcntnr:hover {
+    filter: grayscale(0);
+}
+
+#imgrig .imgcntnr:nth-child(1) {
+    transform: translate(-20%, -5%)rotate(-15deg);
+    background-image: url(/img/mod1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#imgrig .imgcntnr:nth-child(2) {
+    transform: translate(10%, 7%)rotate(-5deg);
+    background-image: url(/img/mod2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#imgrig .imgcntnr:nth-child(3) {
+    transform: translate(35%, 15%)rotate(0deg);
+    background-image: url(/img/mod5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*  work section css goes here */
+
+#work {
+    transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    padding-top: 250px;
+    background-color: #F2F2F2;
+    /* background-color: #1a06ff; */
+}
+
+#work::before {
+    content: "";
+    position: absolute;
+    height: 170px;
+    top: -75px;
+    width: 100%;
+    transform: rotate(-180deg);
+    /* background-color: red; */
+    background-image: url('/img/divider_svg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#work .workrow {
+    padding: 0 12vw;
+    margin-bottom: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.workrow h1 {
+    display: flex;
+    align-items: baseline;
+    font-weight: 550;
+    font-size: 8vw;
+}
+
+.workrow h1 .mini {
+    font-weight: 500;
+    margin-left: 5vw;
+    font-size: 2vw;
+}
+
+
+.workrow svg {
+    transform: rotate(90deg);
+    width: 4vw;
+
+}
+
+/* top_workrow css goes here */
+
+.top_workrow {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5vw;
+}
+
+
+.top_workrow_h5 h5 {
+    opacity: 0.6;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.gray_text {
+    opacity: 0.6;
+    /* transform: translateY(100px); */
+    /* overflow: hidden; */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    font-weight: 400;
+}
+
+
+.top_workrow>.top_services {
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+}
+
+.top_services_text {
+    width: 56%;
+    padding: 0 7vw;
+}
+
+.top_workrow_text {
+    padding: 3vw 7vw;
+}
+
+.top_services hr {
+    width: 90%;
+    background-color: rgba(65, 65, 65, .3);
+    margin: 18vh auto 24vh auto;
+}
+
+
+.o-ui-arrow path {
+    stroke: #BEBEBE;
+}
+
+
+#images {
+    margin-top: 6vw;
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    margin-bottom: 16vh;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 5vw;
+    width: 100%;
+}
+
+#images_2 {
+    margin-top: 6vw;
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    margin-bottom: 16vh;
+    justify-content: center;
+    align-items: baseline;
+    padding: 0 5vw;
+    width: 100%;
+}
+
+#images_3 {
+    margin-top: 6vw;
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    /* margin-bottom: 16vh; */
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 0 5vw;
+    width: 100%;
+}
+
+#images_4 {
+    margin-top: 6vw;
+    position: relative;
+    display: flex;
+    top: -35vw;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding: 0 5vw;
+    width: 45%;
+    height: 100%;
+}
+
+#cnt_4 {
+    width: 100%;
+}
+
+/* Archive css goes here */
+
+#archive h5 {
+    opacity: 0.6;
+    margin-right: 8.5vw;
+    margin-bottom: 2vw;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#archive {
+    position: relative;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 10vh; */
+    top: -24vw;
+    margin-left: -19%;
+    align-items: self-end;
+    width: 100%;
+}
+
+#archive li {
+    list-style: none;
+}
+
+#archive li a {
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+}
+
+
+#cnt_4 img {
+    width: 100%;
+}
+
+.cnt {
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 50px;
+
+}
+
+.cnt img {
+    width: 105%;
+    transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+
+}
+
+.cnt2 img {
+    border-radius: 50px;
+
+}
+
+.cnt1 {
+    width: 55%;
+}
+
+.cnt2 {
+    width: 25%;
+}
+
+
+
+
+#cursor {
+    position: fixed;
+    width: 17vw;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+#cursor>div {
+    pointer-events: none;
+    opacity: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#elem {
+    width: 100%;
+    position: relative;
+}
+
+#cursor .crow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: .7vw;
+}
+
+.crow .ccircle {
+    width: 2vw;
+    height: 2vw;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+.crow .ccapsule {
+    padding: .7vw 3vw;
+    border-radius: 100px;
+    background-color: #fff;
+}
+
+#elem img {
+    width: 100%;
+    opacity: 0;
+    animation: an 4s linear infinite;
+    position: absolute;
+}
+
+#elem img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+#elem img:nth-child(3) {
+    animation-delay: 2s;
+}
+
+#elem img:nth-child(4) {
+    animation-delay: 3s;
+}
+
+#elem img:nth-child(5) {
+    animation-delay: 4s;
+}
+
+@keyframes an {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    21% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* playbook btn goes here */
+
+#playbook_btn {
+    width: 90%;
+    position: relative;
+    border: 1px solid #BEBEBE;
+    padding: 1vw 0;
+    text-align: center;
+    margin: 0 5vw;
+    font-size: 25px;
+    bottom: 8vw;
+    font-weight: 400;
+    color: #5c5f5b;
+    margin-bottom: 16vh;
+
+}
+
+.white_hover_btn {
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    color: #fff;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.7s;
+    background: transparent;
+}
+
+.white_hover_btn p {
+    z-index: 999;
+    position: relative;
+}
+
+.white_hover_btn::before {
+    content: "";
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    width: 0%;
+    height: 100%;
+    left: 50%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+}
+
+.white_hover_btn:hover::before {
+    width: 110%;
+    background: #fff;
+    /* background-color: red; */
+}
+
+.white_hover_btn:hover {
+    color: #000;
+}
+
+
+#work::after {
+    content: "";
+    position: absolute;
+    height: 170px;
+    bottom: -56px;
+    width: 100%;
+    /* background-color: red; */
+    background-image: url('/img/divider_svg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Honors css goes here */
+
+.honors_top_h5 {
+    text-transform: uppercase;
+    font-size: 12px;
+    bottom: -5%;
+}
+
+#honors_top h1 {
+    display: flex;
+    font-weight: 550;
+    font-size: 4vw;
+}
+
+#honors_top {
+    display: flex;
+    align-items: baseline;
+    width: 80%;
+    justify-content: space-between;
+    margin-bottom: 12vh;
+}
+
+#honors {
+    padding: 0 5vw;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+    /* padding-bottom:5vw; */
+}
+
+/* honors top bottom css goes here */
+#honors_bottom {
+    display: flex;
+    gap: 4vw;
+    margin-top: 10vh;
+    /* padding-bottom:5vw; */
+    align-items: center;
+}
+
+#honors_bottom_left {
+    display: flex;
+    width: 30vw;
+    height: 100%;
+    flex-direction: column;
+    gap: 2vw;
+    justify-content: center;
+}
+
+#honors_bottom_left img {
+    height: 50vh;
+    width: 45vh;
+}
+
+#honors_bottom_right {
+    display: flex;
+    /* background-color: red; */
+    width: 60vw;
+    flex-direction: column;
+    gap: 3vw;
+    justify-content: center;
+}
+
+.honors_bottom_right_div {
+    display: flex;
+    gap: 3vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tick_img {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.honors_bottom_right_mid {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 35px;
+}
+
+.char {
+    display: inline-block;
+}
+
+.tick_img img {
+    z-index: 99;
+    height: 30px;
+    filter: invert();
+}
+
+
+
+/* footer css goes here */
+
+#footer {
+    background-color: #253B39;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 5vw 3vw;
+}
+
+#footer_top {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#footer_bot {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#footer_bot svg {
+    left: 4%;
+    position: absolute;
+
+    path,
+    polyline {
+        stroke: #ffffff;
+    }
+}
+
+#footer_top_top {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vw;
+}
+
+#footer_top_top span h1 {
+    font-size: 5vw;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#footer_top_bottom_btn_div {
+    display: flex;
+    justify-content: space-around;
+    padding: 5vw 0vw;
+}
+
+.footer_top_bottom_btn {
+    border: 1px solid white;
+    text-align: center;
+    position: relative;
+    border-radius: 50px;
+    width: 47%;
+    font-size: 1.5vw;
+    overflow: hidden;
+    padding: 2vw 5vw;
+}
+
+
+/* footer_bottom css goes here */
+
+#footer_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: red; */
+}
+
+
+
+
+/* footer_socials css goes here */
+#footer_socials {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 16vh;
+    margin-top: 6vh;
+}
+
+.footer_socials_div {
+    /* background-color: rgb(129, 129, 118); */
+    display: flex;
+    width: 20vw;
+    height: 5vw;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    flex-direction: column;
+
+}
+
+.footer_socials_div::before {
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: rgb(129, 129, 118);   */
+    background-color: #14CF93;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.3s;
+}
+
+.footer_socials_div:hover::before {
+    height: 100%;
+}
+
+.footer_socials_div:hover .footer_socials_inner_div {
+
+    padding: 1vw 1.5vw;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.3s;
+}
+
+.footer_socials_inner_div_text p {
+    opacity: 0.7;
+}
+
+
+.footer_socials_inner_div {
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    padding: 1vw 0;
+    z-index: 99;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.3s;
+}
+
+
+/* footer_bottom_credits css goes here */
+#footer_bottom_credits {
+    opacity: 0.6;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5vw 1.5vw;
+}
+
+#footer_bottom_credits a {
+    text-decoration: none;
+    color: white;
+}
+
+
+#c-circle {
+    position: absolute;
+    bottom: -17%;
+    opacity: 0.2;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
