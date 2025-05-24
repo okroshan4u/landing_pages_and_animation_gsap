@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="first_div div">
+        <h1 id="my-text" class="divh">This is Animation</h1>
+    </div>
+    <div class="second_div div">
+        <h1 id="my-text1" class="divh">This is Animation</h1>
+    </div>
+    <div class="third_div div">
+        <h1 id="my-text2" class="divh">This is Animation</h1>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"
+        integrity="sha512-gWlyRVDsJvp5kesJt4cSdPPLZIBdln/uSwzYgUicQcbTgRNQE4QhP5KUBIYlLYLkiKIQiuD7KUMHzqGNW/D2bQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"
+        integrity="sha512-K7WgwKJAJIRoRV8yDALsY4+CZhsWKk0gVFotVxC2RzCRyoEVyWH1DRDjxw2DdBKdZdBMPr4cacHbYbNco9wOvQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Minified UMD bundle -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script>
+        // Correctly apply SplitType to the target headings
+        const text = new SplitType("#my-text");
+        const text1 = new SplitType("#my-text1");
+        const text2 = new SplitType("#my-text2");
+
+        // Animate the first heading on scroll
+        gsap.to("#my-text .char", {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: "#my-text",
+                scroller: "body",
+                start: "top 10%",
+                markers: true
+            }
+        });
+
+        // Animate the second heading on scroll
+        gsap.to("#my-text1 .char", {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: "#my-text1",
+                scroller: "body",
+                start: "top 40%",
+                markers: true
+            }
+        });
+        // Animate the third heading on scroll
+        gsap.to("#my-text2 .char", {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: "#my-text2",
+                scroller: "body",
+                start: "top 60%",
+                end:"top 90%",
+                markers: true
+            }
+        });
+    </script>
+
+</body>
+
+</html>
