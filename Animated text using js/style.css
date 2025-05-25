@@ -1,0 +1,24 @@
+
+/* Restore spinner arrows in Chrome, Safari */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: auto;
+    margin: 0;
+}
+
+/* Restore in Firefox */
+input[type=number] {
+    -moz-appearance: number-input;
+    appearance: number-input;
+}
+
+#blinking_cursor{
+  display: inline-block;
+  color: black;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
