@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="first_div div">
+        <h1 class="animated-text" data-rotate="x">DEADPOOL</h1>
+    </div>
+    <!-- <div class="second_div div">
+        <h1 class="animated-text" data-direction="top">This is Animation</h1>
+    </div>
+    <div class="third_div div">
+        <h1 class="animated-text" data-direction="left">This is Animation</h1>
+    </div>
+    <div class="fourth_div div">
+        <h1 class="animated-text" data-direction="right">This is Animation</h1>
+    </div>
+    <div class="fifth_div div">
+        <h1 class="animated-text" data-direction="top-left">This is Animation</h1>
+    </div> -->
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"
+        integrity="sha512-gWlyRVDsJvp5kesJt4cSdPPLZIBdln/uSwzYgUicQcbTgRNQE4QhP5KUBIYlLYLkiKIQiuD7KUMHzqGNW/D2bQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"
+        integrity="sha512-K7WgwKJAJIRoRV8yDALsY4+CZhsWKk0gVFotVxC2RzCRyoEVyWH1DRDjxw2DdBKdZdBMPr4cacHbYbNco9wOvQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Minified UMD bundle -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script>
+    document.querySelectorAll('.animated-text').forEach((el) => {
+        new SplitType(el);
+        const chars = el.querySelectorAll('.char');
+
+        // Set initial rotateZ state
+        gsap.set(chars, {
+            rotateY: -90,
+            opacity: 0
+        });
+
+        // Animate to rotateZ(0)
+        gsap.to(chars, {
+            rotateY: 0,
+            opacity: 1,
+            delay:0.3,
+            // stagger: 0.2,
+            duration: 1.5,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 70%",
+                markers: true
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>
