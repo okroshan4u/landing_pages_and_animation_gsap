@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.paragraph {
+    width: 100%;
+}
+
+.line {
+    display: block;
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    height: 24px;
+}
+
+.text {
+    position: absolute;
+}
